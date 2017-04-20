@@ -19,7 +19,7 @@ var connector = new builder.ChatConnector({
 server.post('/api/messages', connector.listen());
 
 var bot = new builder.UniversalBot(connector, function (session) {
-    session.send('Computer says no. Dunno what \'%s\' means. Type \'help\' if you like.', session.message.text);
+    session.send('Computer says no. Dunno what \'%s\' means. Try typing \'help\' if you like...', session.message.text);
 });
 
 // You can provide your own model by specifing the 'LUIS_MODEL_URL' environment variable
@@ -38,7 +38,7 @@ bot.dialog('Book Leave', function (session, args) {
 });
 
 bot.dialog('Help', function (session) {
-    session.endDialog('Computer still says no. Sorry.');
+    session.endDialog('Computer says no. Sorry.');
 }).triggerAction({
     matches: 'Help'
 });

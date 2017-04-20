@@ -40,7 +40,7 @@ Point QnA Maker at a suitable FAQ site
 Test a specific QnA Maker scenario  
 Add a question to the QnA Maker model  
 Retest for a specific scenario  
-Add QnAMaker library to package.json and re-run `>npm install -save`
+Add QnAMaker library to package.json and re-run `>npm install -save`  
 Modify Bot to fall through to QnA Maker search  
 
 ## References

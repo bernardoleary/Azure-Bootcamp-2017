@@ -1,0 +1,376 @@
+{
+  "luis_schema_version": "2.0.0",
+  "versionId": "0.1",
+  "name": "Company Assistant",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "Book Leave"
+    },
+    {
+      "name": "Expense Claim"
+    },
+    {
+      "name": "Find a person"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "Travel booking"
+    },
+    {
+      "name": "Wish for Something"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Expense Type"
+    },
+    {
+      "name": "Item wished for"
+    },
+    {
+      "name": "Language"
+    },
+    {
+      "name": "Skill"
+    },
+    {
+      "name": "Type of Leave"
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": [
+    "datetime",
+    "encyclopedia",
+    "geography",
+    "number"
+  ],
+  "actions": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "i want to claim for expenses",
+      "intent": "Expense Claim",
+      "entities": []
+    },
+    {
+      "text": "i have an expense claim to record",
+      "intent": "Expense Claim",
+      "entities": []
+    },
+    {
+      "text": "i have expenses",
+      "intent": "Expense Claim",
+      "entities": []
+    },
+    {
+      "text": "i would like to log an expense claim",
+      "intent": "Expense Claim",
+      "entities": []
+    },
+    {
+      "text": "i want to claim for a taxi ride",
+      "intent": "Expense Claim",
+      "entities": [
+        {
+          "entity": "Expense Type",
+          "startPos": 22,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "i want to claim hotel expenses",
+      "intent": "Expense Claim",
+      "entities": [
+        {
+          "entity": "Expense Type",
+          "startPos": 16,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "i want to claim for a hotel",
+      "intent": "Expense Claim",
+      "entities": [
+        {
+          "entity": "Expense Type",
+          "startPos": 22,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "i want to claim for dinner",
+      "intent": "Expense Claim",
+      "entities": [
+        {
+          "entity": "Expense Type",
+          "startPos": 20,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "i want to claim for accomodation",
+      "intent": "Expense Claim",
+      "entities": [
+        {
+          "entity": "Expense Type",
+          "startPos": 20,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "i have drinks to expense",
+      "intent": "Expense Claim",
+      "entities": [
+        {
+          "entity": "Expense Type",
+          "startPos": 7,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "i want to take a holiday",
+      "intent": "Book Leave",
+      "entities": [
+        {
+          "entity": "Type of Leave",
+          "startPos": 17,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "i want to book holiday",
+      "intent": "Book Leave",
+      "entities": [
+        {
+          "entity": "Type of Leave",
+          "startPos": 15,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "i have been off sick",
+      "intent": "Book Leave",
+      "entities": [
+        {
+          "entity": "Type of Leave",
+          "startPos": 16,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "i need to record sick leave",
+      "intent": "Book Leave",
+      "entities": [
+        {
+          "entity": "Type of Leave",
+          "startPos": 17,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "i would like to take a day in lieu",
+      "intent": "Book Leave",
+      "entities": [
+        {
+          "entity": "Type of Leave",
+          "startPos": 30,
+          "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "i was off sick yesterday",
+      "intent": "Book Leave",
+      "entities": [
+        {
+          "entity": "Type of Leave",
+          "startPos": 10,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "i want to book off next monday",
+      "intent": "Book Leave",
+      "entities": []
+    },
+    {
+      "text": "i want to book a holiday in july",
+      "intent": "Book Leave",
+      "entities": [
+        {
+          "entity": "Type of Leave",
+          "startPos": 17,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "i would like to have a pool table",
+      "intent": "Wish for Something",
+      "entities": [
+        {
+          "entity": "Item wished for",
+          "startPos": 23,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "i wish we had more comfortable chairs",
+      "intent": "Wish for Something",
+      "entities": [
+        {
+          "entity": "Item wished for",
+          "startPos": 31,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "i wish i could have a new desk",
+      "intent": "Wish for Something",
+      "entities": [
+        {
+          "entity": "Item wished for",
+          "startPos": 26,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "can i wish for better coffee",
+      "intent": "Wish for Something",
+      "entities": [
+        {
+          "entity": "Item wished for",
+          "startPos": 22,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "how many wishes do i get",
+      "intent": "Wish for Something",
+      "entities": []
+    },
+    {
+      "text": "i would love to have a stand up desk",
+      "intent": "Wish for Something",
+      "entities": [
+        {
+          "entity": "Item wished for",
+          "startPos": 32,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "where can i travel to",
+      "intent": "Travel booking",
+      "entities": []
+    },
+    {
+      "text": "i am travelling to auckland next week and need to book accomodation",
+      "intent": "Travel booking",
+      "entities": [
+        {
+          "entity": "Expense Type",
+          "startPos": 55,
+          "endPos": 66
+        }
+      ]
+    },
+    {
+      "text": "i need to travel to a customer in australia",
+      "intent": "Travel booking",
+      "entities": []
+    },
+    {
+      "text": "i want to book travel to wellington next week",
+      "intent": "Travel booking",
+      "entities": []
+    },
+    {
+      "text": "anyone know azure",
+      "intent": "Find a person",
+      "entities": [
+        {
+          "entity": "Skill",
+          "startPos": 12,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "who do i speak to about sharepoint",
+      "intent": "Find a person",
+      "entities": [
+        {
+          "entity": "Skill",
+          "startPos": 24,
+          "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "who knows cognitive services",
+      "intent": "Find a person",
+      "entities": [
+        {
+          "entity": "Skill",
+          "startPos": 10,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "i need someone who can speak maori",
+      "intent": "Find a person",
+      "entities": [
+        {
+          "entity": "Language",
+          "startPos": 29,
+          "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "what is harrison ford's email address",
+      "intent": "Find a person",
+      "entities": []
+    },
+    {
+      "text": "who in the organisation speaks french",
+      "intent": "Find a person",
+      "entities": [
+        {
+          "entity": "Language",
+          "startPos": 31,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "where does alan marshall work",
+      "intent": "Find a person",
+      "entities": []
+    }
+  ]
+}

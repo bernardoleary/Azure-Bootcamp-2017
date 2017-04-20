@@ -9,9 +9,9 @@ This lab will be divided into roughly three sections; we'll look at two Cognitiv
 Time permitting, we'll aim to tick-off all of the following
 
 ## Set-up VS Code
-Download codebase from github  
+Download codebase from GitHub  
 Open terminal using ctrl+`  
-Set up the right command prompt for vscode    
+Set up the right command prompt for VS Code    
 Use npm to load libraries  
 - Run `>npm install -save`  
 
@@ -25,13 +25,16 @@ Log in to LUIS, set up an account
 Log in to Azure and make your own Cognitive Services key (optional)  
 Upload an existing application (company assistant) and link it to a key  
 Train and test existing application/model  
+Explain the probability/threshold
 Overview of NLP - intents/entities/utterances/features  
 
 ## LUIS with a Bot
 Get LUIS URL and put it in our Bot  
-Discuss the waterfall and dialog patterns 
-Set Bot up so that it detects intent and falls through to a default if no suitable option is found  
-Add a "Waterfall" element to the Book Leave dialog, so that there's a discussion
+Discuss the "Waterfall" and "Dialog" patterns 
+Set Bot up so that it detects intent and falls through to a default if no suitable option is found 
+Add "Help" to the LUIS model, retrain and rerun, show how the system matches the intent now
+Add a waterfall element to the Book Leave dialog, so that there's a discussion  
+Modify bot to used an IntentDialog and add a configurable threshold
 
 ## QnA Maker
 Log in to QnA Maker, set up an account  

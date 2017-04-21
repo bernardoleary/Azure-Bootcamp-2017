@@ -28,23 +28,11 @@ intents.matches('Help', [
 ]);
 
 intents.matches('Book Leave', [ 
-    function (session, args, next) {
+    function (session, args) {
         // retrieve type of leave name from matched entities
         var typeOfLeaveEntity = builder.EntityRecognizer.findEntity(args.entities, 'Type of Leave');
         if (typeOfLeaveEntity) {
-            session.privateConversationData.typeOfLeave = typeOfLeaveEntity;
-            session.beginDialog('getDate');
-        }
-    },
-    function (session, results, next) {
-        // check for a response
-        if (results.response) {
-            const typeOfLeave = session.privateConversationData.typeOfLeave;
-            const date = results.response;
-            session.endConversation(`Booking ${typeOfLeave} leave for ${date}`);
-        } else {
-            // no valid response received - End the conversation
-            session.endConversation(`Sorry, computer says no.`);
+            session.send('You want to book \'%s\' leave...?', typeOfLeaveEntity.entity);
         }
     }
 ]);
@@ -52,16 +40,5 @@ intents.matches('Book Leave', [
 intents.onDefault([
     function (session) {
         session.send('Hello');
-    }
-]);
-
-bot.dialog('getDate', [
-    function (session, args, next) {
-        // prompt user
-        builder.Prompts.text(session, 'What date would you like?');
-    },
-    function (session, results, next) {
-        const date = results.response;
-        session.endDialogWithResult({ response: date.trim() });
     }
 ]);

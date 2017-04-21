@@ -57,6 +57,26 @@
   "regex_features": [],
   "utterances": [
     {
+      "text": "what can i do?",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "help me",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "what are the available options?",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "i need help",
+      "intent": "Help",
+      "entities": []
+    },
+    {
       "text": "i want to claim for expenses",
       "intent": "Expense Claim",
       "entities": []

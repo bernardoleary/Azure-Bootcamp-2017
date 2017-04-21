@@ -22,8 +22,7 @@ var bot = new builder.UniversalBot(connector, function (session) {
     session.send('Computer says no. Dunno what \'%s\' means. Try typing \'help\' if you like...', session.message.text);
 });
 
-// You can provide your own model by specifing the 'LUIS_MODEL_URL' environment variable
-// This Url can be obtained by uploading or creating your model from the LUIS portal: https://www.luis.ai/
+// Specify the LUIS model we'll use
 var recognizer = new builder.LuisRecognizer(process.env.LUIS_MODEL_URL);
 bot.recognizer(recognizer);
 

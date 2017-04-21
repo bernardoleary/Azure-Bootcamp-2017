@@ -32,7 +32,7 @@ intents.matches('Book Leave', [
         // retrieve type of leave name from matched entities
         var typeOfLeaveEntity = builder.EntityRecognizer.findEntity(args.entities, 'Type of Leave');
         if (typeOfLeaveEntity) {
-            session.privateConversationData.typeOfLeave = typeOfLeaveEntity;
+            session.privateConversationData.typeOfLeave = typeOfLeaveEntity.entity;
             session.beginDialog('getDate');
         }
     },
@@ -42,6 +42,7 @@ intents.matches('Book Leave', [
             const typeOfLeave = session.privateConversationData.typeOfLeave;
             const date = results.response;
             session.endConversation(`Booking ${typeOfLeave} leave for ${date}`);
+            // do stuff here
         } else {
             // no valid response received - End the conversation
             session.endConversation(`Sorry, computer says no.`);

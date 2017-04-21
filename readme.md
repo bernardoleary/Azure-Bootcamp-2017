@@ -35,7 +35,7 @@ Overview of NLP - intents/entities/utterances/features
 Get LUIS URL and put it in our Bot  
 Discuss the "Waterfall" and "Dialog" patterns 
 Set Bot up so that it detects intent and falls through to a default if no suitable option is found 
-Add "Help" to the LUIS model, retrain and rerun, show how the system matches the intent now
+Add "Help" to the existing LUIS model, retrain and rerun, show how the system matches the intent now
 Add a waterfall element to the Book Leave dialog, so that there's a discussion  
 Modify bot to used an IntentDialog and add a configurable threshold
 
